@@ -1,0 +1,6 @@
+@QuorumMind.Infrastructure.FeatureFlag.ExampleApp_HostAddress = http://localhost:5076
+
+GET {{QuorumMind.Infrastructure.FeatureFlag.ExampleApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

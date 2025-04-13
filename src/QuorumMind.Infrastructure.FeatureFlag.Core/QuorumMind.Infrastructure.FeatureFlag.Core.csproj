@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>QuorumMind.Infrastructure.FeatureFlag.Core</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>David Abaev</Authors>
+        <Company>QuorumMind</Company>
+        <Description>Core library for Feature Flag provider  for distributed .NET apps</Description>
+        <PackageTags>feature-flag  microservices quorum-mind</PackageTags>
+        <RepositoryUrl>https://github.com/QuorumMind/QuorumMind.Infrastructure.FeatureFlag</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    </ItemGroup>
+
+</Project>
