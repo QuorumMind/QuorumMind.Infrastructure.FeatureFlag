@@ -7,7 +7,7 @@ namespace QuorumMind.Infrastructure.FeatureFlag.Core.Extensions;
 
 public static class FeatureFlagBuilderExtensions
 {
-    public static IServiceCollection AddFeatureFlagsCore(this IServiceCollection services, string scope)
+    public static IServiceCollection AddFeatureFlagsCore(this IServiceCollection services, string scope, TimeSpan? interval = null)
     {
     
         services.AddSingleton<IFeatureFlagService, FeatureFlagService>();
@@ -15,7 +15,8 @@ public static class FeatureFlagBuilderExtensions
             new FeatureFlagRefreshService(
                 sp.GetRequiredService<IFeatureFlagProvider>(),
                 sp.GetRequiredService<FeatureFlagCache>(),
-                scope: scope)
+                scope: scope,
+                interval: interval)
         );
         return services;
     }
